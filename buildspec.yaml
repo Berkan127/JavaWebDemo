@@ -5,16 +5,13 @@ phases:
       java: corretto21
   build:
     commands:
-
-    -  echo Build completed on `date`
-
-    -    mvn package -DskipTests
+      - echo Build completed on `date`
+      - mvn package -DskipTests
 post_build:
   commands:
-  - echo Build completed on `date`
+    - echo Build completed on `date`
 
 artifacts:
   files:
-
-  - target/*.jar
+    - target/*.jar
 discard-paths: yes
