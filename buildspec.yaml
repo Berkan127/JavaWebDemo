@@ -14,4 +14,4 @@ post_build:
 artifacts:
   files:
     - target/*.jar
-  discard-paths: yes
+discard-paths: yes
