@@ -8,8 +8,8 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
-@SpringBootTest
+@SpringBootTest()
+@ActiveProfiles("test")
 public class BeerCalculatorServiceTest {
 
     private BeerCalculatorService beerCalculatorService;
@@ -29,15 +29,15 @@ public class BeerCalculatorServiceTest {
     @Test
     @DisplayName("Kasta exception för ogiltig volym")
     void throwExceptionForInvalidVolume() {
-        assertThrows(IllegalArgumentException.class, () -> 
-            beerCalculatorService.calculateStandardDrinks(-100, 5.0));
+        assertThrows(IllegalArgumentException.class, () ->
+                beerCalculatorService.calculateStandardDrinks(-100, 5.0));
     }
 
     @Test
     @DisplayName("Kasta exception för ogiltig alkoholprocent")
     void throwExceptionForInvalidAlcoholPercentage() {
-        assertThrows(IllegalArgumentException.class, () -> 
-            beerCalculatorService.calculateStandardDrinks(500, 101.0));
+        assertThrows(IllegalArgumentException.class, () ->
+                beerCalculatorService.calculateStandardDrinks(500, 101.0));
     }
 
     @Test
@@ -62,4 +62,4 @@ public class BeerCalculatorServiceTest {
         double bac = beerCalculatorService.calculateBAC(2.0, 80.0, 10.0, true);
         assertEquals(0.0, bac, 0.001);
     }
-} 
+}
