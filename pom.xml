@@ -11,7 +11,7 @@
     <groupId>org.example</groupId>
     <artifactId>JavaWebDemp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>JavaWebDemp</name>
+    <name>JavaWebDemo</name>
     <description>JavaWebDemo</description>
     <url/>
     <licenses>
@@ -46,6 +46,7 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
+            <version>42.7.5</version>
         </dependency>
 
         <!-- OAuth2 Client -->
