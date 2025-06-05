@@ -100,13 +100,10 @@
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
-            <scope>test</scope>
+            <version>2.3.232</version>
         </dependency>
 
     </dependencies>
-
-
-
     <build>
         <plugins>
             <plugin>
