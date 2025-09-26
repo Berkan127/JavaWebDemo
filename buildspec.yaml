@@ -7,11 +7,9 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvn clean verify
-
 post_build:
   commands:
     - echo Build completed on `date`
-
 artifacts:
   files:
     - target/*.jar
