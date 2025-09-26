@@ -30,7 +30,9 @@ public class WebSecurityConfig {
                 .cors(AbstractHttpConfigurer::disable)
 
                 .oauth2Login(oauth2 -> {
-                            oauth2.userInfoEndpoint(userInfo -> userInfo.userService(customOauth2UserService));
+                    oauth2.userInfoEndpoint(userInfo -> userInfo.userService(customOauth2UserService));
+                    oauth2.loginPage("/oauth_login");
+                    oauth2.defaultSuccessUrl("/profile", true);
                         }
                 );
         http.sessionManagement(c -> c.sessionCreationPolicy(SessionCreationPolicy.ALWAYS));
